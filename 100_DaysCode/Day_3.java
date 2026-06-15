@@ -1,25 +1,47 @@
+import java.util.Scanner;
 public class Day_3 {
     public static void main(String[] arg){
 
         Class cls = new Class();
-        cls.nPrime(7);
+        cls.nPrime(30);
     }
 }
 
 class Class{
 
-    String addWithoutPlus(int a, int b){
-
-        return "";
+    int addWithoutPlus(int a, int b){
+        while(b != 0){
+            int carry = (a & b) << 1;
+            a = a ^ b;
+            b = carry;
+        }
+        return a;
     }
 
     String PerfectNum(int n){
+        // A perfect number is equal to the sum of its proper divisors(excluding the number itself).
+
+        int sum = 0;
+        for(int i=1; i<n/2; i++){
+            if(n%i == 0)
+                sum += i;
+        }
+        String result = sum == n? "Perfect" : " Not perfect";
         
-        return "";
+        return result;
     }
 
-    double average(int a, int b, double c){
-        double avg = (a+b+c)/3;
+    double average(int n){
+            
+        Scanner s = new Scanner(System.in);
+
+        int sum = 0;
+        System.out.println("Enter " + n + " numbers ");
+        for(int i=1; i<=n; i++){
+            sum += s.nextInt();
+        }
+        double avg = (double) sum /n;
+
         return avg;
     }
 
@@ -40,17 +62,23 @@ class Class{
     void nPrime(int n){
 
         int count = 0;
+        int num = 2;
 
-        for(int i=2; i<50; i++){
-            for(int j = 2; j<i; j++){
-                if(i%j == 0)
-                    break;
-                else{
-                    System.out.print(i + " ");
+        while(count<n){
+            boolean isPrime = true;
+
+            for(int i= 2; i<=Math.sqrt(num); i++){
+                if(num%i == 0){
+                    isPrime = false;
                     break;
                 }
-    
             }
+
+            if(isPrime){
+                System.out.print(num + " ");
+                count ++;
+            }    
+                num ++;
         }
     }
 }

@@ -3,3 +3,8 @@ class Day4{
         
     }
 }
+
+class MathFunctions{
+
+    
+}

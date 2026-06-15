@@ -35,6 +35,7 @@ class CheckNumbers{
         System.out.println(a + " " + b);
 
     }
+    
     void swapNum(int a, int b, int c){
         
         a = a + b + c;
