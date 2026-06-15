@@ -2,7 +2,7 @@ public class Day_3 {
     public static void main(String[] arg){
 
         Class cls = new Class();
-        System.out.println(cls.EvenOdd(-6));
+        cls.nPrime(7);
     }
 }
 
@@ -37,12 +37,19 @@ class Class{
         return n%2 == 0 ? "Even" : "Odd";
     }
 
-    int nPrime(int n){
+    void nPrime(int n){
 
         int count = 0;
-        while(count != n){
-            for(int i=2; i<100; i++){
-                
+
+        for(int i=2; i<50; i++){
+            for(int j = 2; j<i; j++){
+                if(i%j == 0)
+                    break;
+                else{
+                    System.out.print(i + " ");
+                    break;
+                }
+    
             }
         }
     }

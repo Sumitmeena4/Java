@@ -2,7 +2,7 @@ public class Day_2 {
     public static void main(String [] arg){
 
         CheckNumbers check = new CheckNumbers();
-        check.primeFactor(60);
+        System.out.println(check.IsBinary(181));
     }
 }
 
@@ -15,10 +15,13 @@ class CheckNumbers{
 
     String IsBinary(int n){
 
-        while(n>0){
-            if(n%10 != 1 || n%10 != 0)
-                return "Not Binary"; 
-            n /=10;  
+        while(n!=0){
+            int dig = n%10;
+
+            if(dig != 1 && dig  != 0)
+            return "Not Binary"; 
+
+            n /= 10;
         }
         
         return "Binary";
