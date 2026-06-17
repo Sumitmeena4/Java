@@ -82,5 +82,4 @@ class MathFunction{
         double result = Math.sqrt(n);
         return result;
     }
-
 }
