@@ -82,7 +82,7 @@ class Array{
     }
 
     //Method to remove the duplicates form array.
-    private int[] removeDuplicate(int arr[]){
+    public int[] removeDuplicate(int arr[]){
 
         int k = 0;
         // for(int i=0; i<n; i++){
