@@ -1,14 +1,14 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Day7 {
     public static void main(String[] arg){
 
-        int[] arr = {2,3,4,6,8,3,9};
+        int[] arr1 = {1,2,3,4,5,6,7,8};
+        int[] arr2 = {10,11,12,14};
+        
+        Array2 array2 = new Array2();   // variable creation of type Class(Array2).
 
-        Array2 array2 = new Array2();
-        for(int n: array2.insertElement(arr)){
-            System.out.print(n + " ");
-        }
     }
 }
 class Array2{
@@ -41,7 +41,7 @@ class Array2{
    }
 
    //Method to delete last element from array.
-   int[] deleteLastElement(int[] arr){
+   public int[] deleteLastElement(int[] arr){
 
     // By creating new Array.
     // Time -- O(n), Space O(n).
@@ -56,7 +56,7 @@ class Array2{
    }
 
    //Method to delete the given element form the array.
-   int[] deleteGivenElement(int[] arr, int element){
+   public int[] deleteGivenElement(int[] arr, int element){
 
     //By creating new Array
     //Time -- O(n), Space -- O(n).
@@ -86,5 +86,116 @@ class Array2{
     return arr;
    }
 
+   //Method to delete the index element from given array.
+   public int[] deleteAtIndex(int[] arr, int index){
 
+    // int[] arr2 = new int[arr.length-1];
+    // for(int i=0,k=0; i<arr.length; i++){
+    //     if(index != i){
+    //         arr2[k++] = arr[i];
+    //     }
+    // }
+
+    for(int i=index; i<arr.length-1; i++){
+        arr[i] = arr[i+1];
+    }
+    
+    return arr;
+   }
+
+   //Method to find the sum of an array.
+   public int calculateSum(int[] arr){
+
+    int sum = 0;
+    for(int n : arr){
+        sum += n;
+    }
+    return sum;
+   }
+
+   //Method to print all the even in given array.
+    public ArrayList<Integer> EvenInArray(int[] arr){
+
+    ArrayList <Integer> list = new ArrayList<>();
+    for(int n : arr){
+        if(n%2 == 0){
+            list.add(n);
+        }
+    }
+    return list;
+
+    // int[] arr2 = new int[arr.length];
+    // int count =0;
+    // for(int n : arr){
+    //     if(n%2==0)
+    //         arr2[count++] = n;
+    // }
+    // for(int i=0; i<count; i++){
+    //     System.out.print(arr2[i] + " ");
+    // }    
+   }
+
+   //Method to print all Odd in an array.
+   public ArrayList<Integer> OddInArray(int[] arr){
+
+    ArrayList<Integer> list = new ArrayList<>();
+    for(int n : arr){
+        if(n%2!=0)
+            list.add(n);
+    }
+    return list;
+   }
+
+   //Method to perform left rotation by 2 positions.
+   protected int[] leftRotation(int[] arr){
+
+    for(int i=0; i<arr.length-3; i+=2){
+        int temp = arr[i];
+        arr[i] = arr[i+2];
+        arr[i+2] = temp;
+
+        temp = arr[i+1];
+        arr[i+1] = arr[i+3];
+        arr[i+3] = temp;
+    }
+
+    return arr;
+   }
+
+   //Method to perform right rotation by 2 positions.
+   protected int[] rightRotation(int[] arr){
+
+    for(int i=arr.length-1; i>2; i-=2){
+        int temp = arr[i];
+        arr[i] = arr[i-2];
+        arr[i-2] = temp;
+        
+        temp = arr[i-1];
+        arr[i-1] = arr[i-3];
+        arr[i-3] = temp;
+    }
+    return arr;
+   }
+
+   //Method to merge two arrays.
+   protected ArrayList<Integer> mergeArrays(int[] arr1, int[] arr2){
+    // int[] merged = new int[arr1.length + arr2.length];
+    // int i=0;
+    // for(int n: arr1){
+    //     merged[i++] = n;
+    // }
+    // for(int n : arr2){
+    //     merged[i++] = n;
+    // }
+    // return merged;
+
+    ArrayList<Integer> list = new ArrayList<>();
+    for(int n : arr1){
+        list.add(n);
+    }
+    for(int n: arr2){
+        list.add(n);
+    }
+    return list;
+   }
 }

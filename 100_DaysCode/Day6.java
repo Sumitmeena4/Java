@@ -57,7 +57,7 @@ class Array{
     }
 
     //Method to find first Duplicate in an array.
-    int firstDuplicate(int arr[]){
+    public int firstDuplicate(int arr[]){
         
         // Brute force approach
         // Time complexity -- O(n^2), Space -- O(1).        
@@ -82,7 +82,7 @@ class Array{
     }
 
     //Method to remove the duplicates form array.
-    int[] removeDuplicate(int arr[]){
+    private int[] removeDuplicate(int arr[]){
 
         int k = 0;
         // for(int i=0; i<n; i++){
@@ -109,7 +109,7 @@ class Array{
         return arr2;
     }
 
-    int checkMatch(int[] arr1, int[] arr2){
+    private int checkMatch(int[] arr1, int[] arr2){
 
         for(int i=0; i<arr1.length; i++){
         boolean found = false;
@@ -126,7 +126,7 @@ class Array{
         return 0;
     }
 
-    String compareArrays(int[] arr1, int[] arr2){
+    protected String compareArrays(int[] arr1, int[] arr2){
 
         int size1 = arr1.length;
         int size2 = arr2.length;
@@ -136,7 +136,7 @@ class Array{
         return equality;
     }
 
-    void LargestAndSmallest(int[] arr){
+    public  void LargestAndSmallest(int[] arr){
 
         int smallest = arr[0];
         int largest = arr[0];
@@ -168,7 +168,7 @@ class Array{
         return secondHighest;
     }
 
-    int[] top2Max(int[] arr){
+    public int[] top2Max(int[] arr){
 
         int top1 = arr[0];
         int top2 = arr[0];
