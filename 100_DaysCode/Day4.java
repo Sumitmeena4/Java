@@ -2,10 +2,9 @@ public class Day4{
     public static void main(String[] args){
         
         MathFunction function = new MathFunction();
-        System.out.println(function.root(25));
+        System.out.println(function.cubeRoot(125));
     }
 }
-
 class MathFunction{
 
     void PrimeInRange(int a, int b){
@@ -72,14 +71,20 @@ class MathFunction{
 
     int square(int n){
         int sqr = n * n;
-
         return sqr;
     }
+
     long cube(long n){
         return n*n*n;
     }
-    double root(int n){
+    
+    double squareRoot(int n){
         double result = Math.sqrt(n);
+        return result;
+    }
+
+    double cubeRoot(int n){
+        double result = Math.cbrt(n);
         return result;
     }
 }

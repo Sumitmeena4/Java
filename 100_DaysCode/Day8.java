@@ -185,7 +185,7 @@ class Strings{
         return vowel;
     }
 
-    //Method to find the char who has higest frequency.
+    //Method to find higest frequency character in a string.
     public char highestFrequency(String str){
 
         // Time -- O(n^2), Space -- O(1).
@@ -198,13 +198,11 @@ class Strings{
                 if(str.charAt(i) == str.charAt(j))
                     count ++;
             }
-
             if(count>max){
                 max = count;
                 result = str.charAt(i);
             }
         }
-
         return result;
     }
 }

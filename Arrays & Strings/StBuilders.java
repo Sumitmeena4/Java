@@ -24,7 +24,6 @@ public class StBuilders{
 
     public static String StCompression(String str){
         for(int i=0; i<str.length(); i++){
-            str.charAt(i);
             int count = 1;
 
             while(str.charAt(i)==str.charAt(i)){

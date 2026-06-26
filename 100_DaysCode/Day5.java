@@ -88,6 +88,7 @@ class AdvNumeric{
 
         return celsius;
     }
+    
     int toFahrenheit(int temp){
         return (temp * 9/5) + 32;
     }
