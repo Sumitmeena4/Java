@@ -2,8 +2,9 @@ public class Day9 {
     public static void main(String[] arg){
 
         String str = "Believe in your self, Be confident.";
+        String str2 = "Everything will be fine.";
         String2 string2 = new String2();
-        System.out.println(string2.removeBlanks(str));
+        System.out.println(string2.concatString(str, str2));
     }
 }
 
@@ -79,11 +80,22 @@ class String2{
         
         for(int i=0; i<str.length()-1; i++){
             if(ch[i] == ' '){
-                ch[i+1] = ch[i+2];
+                ch[i] = ch[i+1];
                 i++;
             }
+            
         }
         str = new String(ch);
+        str.replaceAll(" ", "");
        return str;
+    }
+
+    public String concatString(String str1, String str2){
+        return str1.concat(str2);
+    }
+
+    public String removeDuplicate(String str){
+
+        return "";
     }
 }
