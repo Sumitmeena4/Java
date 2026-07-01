@@ -81,16 +81,4 @@ public class Day11 {
         }
     }
 
-    public void countNotes(int amount){
-        int fiveHundred = 0;
-        int twohundred = 0;
-        int hundred = 0;
-        int fifty = 0;
-        int twenty = 0;
-        int ten = 0;
-    }
-
-    public void formTriangle(){
-        
-    }
 }

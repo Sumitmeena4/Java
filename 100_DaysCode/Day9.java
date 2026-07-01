@@ -93,9 +93,4 @@ class String2{
     public String concatString(String str1, String str2){
         return str1.concat(str2);
     }
-
-    public String removeDuplicate(String str){
-
-        return "";
-    }
 }
