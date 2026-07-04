@@ -38,9 +38,7 @@ public class Day15 {
 
     public String printNonRepeating(String s){
 
-        //StringBuilder sb = new StringBuilder();
         String str = "";
-        s.rep
         for(int i=0; i<s.length(); i++){
             if(str.indexOf(s.charAt(i)) == -1){
                 str += s.charAt(i);

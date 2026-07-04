@@ -23,7 +23,7 @@ public class Day14 {
 
     public String isWord(char ch){
 
-        String result = ((ch>='A' && ch<='Z')|| (ch>='a' && ch<='z'))? "Character" : "Not a Char";
+        String result = ((ch>='A' && ch<='Z') || (ch>='a' && ch<='z'))? "Character" : "Not a Char";
         return result;
     }
 }

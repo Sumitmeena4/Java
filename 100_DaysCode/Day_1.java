@@ -18,7 +18,7 @@ class NumSystem{
         return rev;
     }
 
-    int IsArmstrong(int n){
+    public int IsArmstrong(int n){
         // An armstrong number is number that is equal to the sum of its digit,
         // each raised to the power of no of digits in that number.
 

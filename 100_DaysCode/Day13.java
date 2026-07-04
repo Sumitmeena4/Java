@@ -3,7 +3,6 @@ public class Day13 {
 
         Day13 obj = new Day13();
         obj.printArmstrong(500);
-        
     }
 
     int productOfDigits(int n){
