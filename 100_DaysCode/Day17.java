@@ -3,5 +3,15 @@ public class Day17 {
 
     }
 
-    
+
+}
+
+class OOP{
+
+    int id;
+    String name;
+
+    public String getName(){
+        return "";
+    }
 }
