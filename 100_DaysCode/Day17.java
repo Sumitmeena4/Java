@@ -1,17 +1,20 @@
 public class Day17 {
     public static void main(String[] arg){
 
+        OOP oops = new OOP();
+        System.out.println(oops.getName());
     }
-
-
 }
 
 class OOP{
 
     int id;
-    String name;
+    String name = "Sumit";
 
     public String getName(){
-        return "";
+        return name;
+    }
+    public int getId(){
+        return id;
     }
 }
