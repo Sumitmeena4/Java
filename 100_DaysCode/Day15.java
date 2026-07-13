@@ -54,7 +54,7 @@ public class Day15 {
 
         for(int i=0; i<s.length(); i++){
             char ch = s.charAt(i);
-            if(freq[ch] ==1)
+            if(freq[ch] == 1)
                 sb.append(ch);
         }
         return sb.toString();
