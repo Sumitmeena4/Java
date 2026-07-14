@@ -1,7 +1,6 @@
 public class Day5 {
     public static void main(String[] args) {
         AdvNumeric adv = new AdvNumeric();
-        System.out.println(adv.calcSI(50000,2,1));
     }
 }
 
@@ -81,19 +80,5 @@ class AdvNumeric{
             return "Leap Year";
 
         return "Not a Leap Year";
-    }
-
-    int toCelsius(int temp){
-        int celsius = (temp-32) * 5/9;
-
-        return celsius;
-    }
-    
-    int toFahrenheit(int temp){
-        return (temp * 9/5) + 32;
-    }
-
-    int calcSI(int principal, int rate, int time){
-        return (principal * rate * time)/100;
     }
 }
