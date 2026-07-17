@@ -1,6 +1,6 @@
 public class Day22 {
     public static void main(String[] arg){
-        rightHalfParamid(5);
+        leftHalfParamid(5);
     }
     
     static void rightHalfParamid(int n){
@@ -15,6 +15,14 @@ public class Day22 {
 
     static void leftHalfParamid(int n){
 
-        
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int k=1; k<=i; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
