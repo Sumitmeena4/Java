@@ -1,9 +1,9 @@
 public class Day22 {
     public static void main(String[] arg){
-        leftHalfParamid(5);
+        leftHalfPyramid(5);
     }
     
-    static void rightHalfParamid(int n){
+    static void rightHalfPyramid(int n){
 
         for(int i=1; i<=n; i++){
             for(int j=1; j<=i; j++){
@@ -13,7 +13,7 @@ public class Day22 {
         }
     }
 
-    static void leftHalfParamid(int n){
+    static void leftHalfPyramid(int n){
 
         for(int i=1; i<=n; i++){
             for(int j=1; j<=n-i; j++){
