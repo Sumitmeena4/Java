@@ -1,4 +1,4 @@
-class Day_1{
+class Day1{
     public static void main(String[] a){
 
         NumSystem var = new NumSystem();

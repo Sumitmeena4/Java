@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Day_3 {
+public class Day3 {
     public static void main(String[] arg){
 
         Class cls = new Class();

@@ -1,4 +1,4 @@
-public class Day_2 {
+public class Day2 {
     public static void main(String [] arg){
 
         CheckNumbers check = new CheckNumbers();
