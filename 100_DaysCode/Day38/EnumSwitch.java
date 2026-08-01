@@ -3,6 +3,7 @@ package Day38;
 public class EnumSwitch {
 
     EnumSwitch(){
+        Status s;
             System.out.println("In consturctor....");
         }
 

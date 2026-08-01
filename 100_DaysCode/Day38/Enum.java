@@ -9,8 +9,7 @@ public class Enum{
     public static void main(String[] arg){
         Status s = Status.completed;
 
-        EnumSwitch swt = new EnumSwitch();
-        swt.getStatus(s);
+        EnumSwitch.getStatus(s);
 
         // System.out.println(s);
 
